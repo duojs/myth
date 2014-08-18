@@ -1,9 +1,46 @@
 
 # duo-myth
 
-  duo plugin for segmentio/myth
+  duo plugin for [segmentio/myth](https://github.com/segmentio/myth).
 
-## License 
+## Installation
+
+```bash
+npm install duo-myth
+```
+
+## Usage
+
+From the CLI:
+
+```bash
+$ npm install duo-myth
+$ duo --use duo-myth
+```
+
+Using the API:
+
+```js
+Duo(root)
+  .entry(entry)
+  .use(myth())
+  .run(fn);
+```
+
+## API
+
+### myth([opts])
+
+Initialize a duo plugin. `opts` are passed directly into myth.
+
+## Test
+
+```bash
+$ npm install
+$ make
+```
+
+## License
 
 (The MIT License)
 
