@@ -22,7 +22,6 @@ function myth(opts) {
 
   return function(file) {
     if ('css' != file.type) return;
-    console.log(opts);
     file.src = compile(file.src, opts);
   }
 }
