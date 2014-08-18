@@ -5,10 +5,10 @@
 var compile = require('myth');
 
 /**
- * Export `myth`
+ * Export `plugin`
  */
 
-module.exports = myth;
+module.exports = plugin;
 
 /**
  * Myth plugin
@@ -17,10 +17,10 @@ module.exports = myth;
  * @return {String}
  */
 
-function myth(opts) {
+function plugin(opts) {
   opts = opts || {};
 
-  return function(file) {
+  return function myth(file) {
     if ('css' != file.type) return;
     file.src = compile(file.src, opts);
   }
