@@ -1,0 +1,61 @@
+@media screen and (max-width: 30em) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+a {
+  color: #a6c776;
+  -webkit-font-feature-settings: "smcp", "c2sc";
+  -moz-font-feature-settings: "smcp", "c2sc";
+  font-feature-settings: "smcp", "c2sc";
+  font-variant: all-small-caps;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+}
+
+a:hover {
+  color: rgb(133, 159, 94);
+}
+
+::-webkit-input-placeholder {
+  opacity: .4;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+::-moz-placeholder {
+  opacity: .4;
+  transition: opacity 1s;
+}
+
+:-ms-input-placeholder {
+  opacity: .4;
+  transition: opacity 1s;
+}
+
+::placeholder {
+  opacity: .4;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+:focus::-webkit-input-placeholder {
+  opacity: .2;
+}
+
+:focus::-moz-placeholder {
+  opacity: .2;
+}
+
+:focus:-ms-input-placeholder {
+  opacity: .2;
+}
+
+:focus::placeholder {
+  opacity: .2;
+}
+
+.foo {
+  background-color: black;
+}
