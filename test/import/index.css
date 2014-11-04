@@ -1,3 +1,7 @@
+:root {
+  --red: #ff0000;
+}
+
 @import "foo.css";
 
 .foo {

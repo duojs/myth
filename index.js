@@ -22,6 +22,7 @@ function plugin(opts) {
 
   return function myth(file) {
     if ('css' != file.type) return;
+    opts.source = file.path;
     file.src = compile(file.src, opts);
   }
 }
