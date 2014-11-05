@@ -1,6 +1,6 @@
 {
   "name": "duo-myth",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "duo plugin for segmentio/myth",
   "keywords": [],
   "author": "Matthew Mueller <mattmuelle@gmail.com>",
