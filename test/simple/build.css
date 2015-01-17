@@ -10,7 +10,6 @@ a {
   -moz-font-feature-settings: "smcp", "c2sc";
   font-feature-settings: "smcp", "c2sc";
   font-variant: all-small-caps;
-  -webkit-transition: color 1s;
   transition: color 1s;
 }
 
@@ -20,7 +19,6 @@ a:hover {
 
 ::-webkit-input-placeholder {
   opacity: .4;
-  -webkit-transition: opacity 1s;
   transition: opacity 1s;
 }
 
@@ -36,7 +34,6 @@ a:hover {
 
 ::placeholder {
   opacity: .4;
-  -webkit-transition: opacity 1s;
   transition: opacity 1s;
 }
 

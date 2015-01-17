@@ -40,6 +40,19 @@ describe('duo-myth', function() {
       });
   })
 
+  it('should compile .css using remote imports', function(done){
+    var expected = read(fixture('import-remote/build.css'), 'utf8');
+
+    Duo(__dirname)
+      .use(myth())
+      .entry(fixture('import-remote/index.css'))
+      .run(function(err, css) {
+        if (err) return done(err);
+        assert(css == expected);
+        done();
+      });
+  })
+
   it('should pass options through', function(done) {
     Duo(__dirname)
       .use(myth({ compress: true }))

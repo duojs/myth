@@ -19,6 +19,13 @@ module.exports = plugin;
 
 function plugin(opts) {
   opts = opts || {};
+  opts.features = opts.features || {};
+
+  // only disable import, if not explictly
+  // set to true
+  if (opts.features.import !== true) {
+    opts.features.import = false;
+  }
 
   return function myth(file) {
     if ('css' != file.type) return;
