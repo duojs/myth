@@ -22,7 +22,7 @@ describe('duo-myth', function() {
       .entry(fixture('simple/index.css'))
       .run(function(err, css) {
         if (err) return done(err);
-        assert(css == expected.trim());
+        assert.equal(css.trim(), expected.trim());
         done();
       });
   })
@@ -35,7 +35,7 @@ describe('duo-myth', function() {
       .entry(fixture('import/index.css'))
       .run(function(err, css) {
         if (err) return done(err);
-        assert(css == expected.trim());
+        assert.equal(css.trim(), expected.trim());
         done();
       });
   })
@@ -46,7 +46,7 @@ describe('duo-myth', function() {
       .entry('body {\n\tbackground: blue;\n}', 'css')
       .run(function(err, css) {
         if (err) return done(err);
-        assert('body{background:blue;}' == css);
+        assert.equal('body{background:blue;}', css);
         done();
       });
   })
