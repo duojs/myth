@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/duojs/myth.svg)](https://travis-ci.org/duojs/myth)
 
 # duo-myth
 
