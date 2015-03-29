@@ -3,6 +3,7 @@
  */
 
 var compile = require('myth');
+var defaults = require('defaults');
 
 /**
  * Export `plugin`
@@ -11,18 +12,28 @@ var compile = require('myth');
 module.exports = plugin;
 
 /**
+ * Default options.
+ */
+
+plugin.defaults = {
+  features: {
+    import: false
+  }
+};
+
+/**
  * Myth plugin
  *
- * @param {Object} opts
+ * @param {Object} o
  * @return {String}
  */
 
-function plugin(opts) {
-  opts = opts || {};
+function plugin(o) {
+  var opts = defaults(o, plugin.defaults);
 
   return function myth(file) {
     if ('css' != file.type) return;
-    opts.source = file.path;
-    file.src = compile(file.src, opts);
+    var options = defaults(opts, { source: file.path });
+    file.src = compile(file.src, options);
   }
 }
