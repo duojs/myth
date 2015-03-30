@@ -13,7 +13,9 @@
     "myth": "^1.2.1"
   },
   "devDependencies": {
+    "bluebird": "^2.9.21",
     "duo": "^0.11.1",
+    "gnode": "^0.1.1",
     "mocha": "^2.2.1"
   },
   "main": "index"
