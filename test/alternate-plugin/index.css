@@ -1,0 +1,10 @@
+:root {
+  --red: #ff0000;
+  --green: #a6c776;
+}
+
+@import "./page.css";
+
+body {
+  background-color: var(--green);
+}

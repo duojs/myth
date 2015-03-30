@@ -16,6 +16,7 @@ module.exports = plugin;
  */
 
 plugin.defaults = {
+  alternate: false,
   features: {
     import: false
   }
@@ -31,9 +32,14 @@ plugin.defaults = {
 function plugin(o) {
   var opts = defaults(o, plugin.defaults);
 
-  return function myth(file) {
-    if ('css' != file.type) return;
-    var options = defaults(opts, { source: file.path });
-    file.src = compile(file.src, options);
+  // this plugin only works on the entire build
+  myth.alternate = true;
+  return myth;
+
+  function myth(build, entry) {
+    if (entry.type !== 'css') return;
+
+    var options = defaults(opts, { source: entry.path });
+    build.code = compile(build.code, options);
   }
 }

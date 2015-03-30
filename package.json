@@ -13,8 +13,8 @@
     "myth": "^1.2.1"
   },
   "devDependencies": {
-    "mocha": "^2.0.1",
-    "duo": "^0.8.5"
+    "duo": "^0.11.1",
+    "mocha": "^2.2.1"
   },
   "main": "index"
 }
