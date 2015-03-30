@@ -22,7 +22,7 @@ describe('duo-myth', function() {
       .entry(fixture('simple/index.css'))
       .run(function(err, css) {
         if (err) return done(err);
-        assert.equal(css.trim(), expected.trim());
+        assert.equal(css.code.trim(), expected.trim());
         done();
       });
   })
@@ -35,10 +35,23 @@ describe('duo-myth', function() {
       .entry(fixture('import/index.css'))
       .run(function(err, css) {
         if (err) return done(err);
-        assert.equal(css.trim(), expected.trim());
+        assert.equal(css.code.trim(), expected.trim());
         done();
       });
   })
+
+  it('should process the entire build', function(done) {
+    var expected = read(fixture('alternate-plugin/build.css'), 'utf8');
+
+    Duo(__dirname)
+      .use(myth())
+      .entry(fixture('alternate-plugin/index.css'))
+      .run(function (err, css) {
+        if (err) return done(err);
+        assert.equal(css.code.trim(), expected.trim());
+        done();
+      });
+  });
 
   it('should pass options through', function(done) {
     Duo(__dirname)
@@ -46,7 +59,7 @@ describe('duo-myth', function() {
       .entry('body {\n\tbackground: blue;\n}', 'css')
       .run(function(err, css) {
         if (err) return done(err);
-        assert.equal('body{background:blue;}', css);
+        assert.equal('body{background:blue;}', css.code);
         done();
       });
   })
