@@ -2,12 +2,12 @@
 
 # duo-myth
 
-  duo plugin for [segmentio/myth](https://github.com/segmentio/myth).
+> duo plugin for [segmentio/myth](https://github.com/segmentio/myth).
 
 ## Installation
 
 ```bash
-npm install duo-myth
+$ npm install duo-myth
 ```
 
 ## Usage
@@ -34,11 +34,21 @@ Duo(root)
 
 Initialize a duo plugin. `opts` are passed directly into myth.
 
+## Plugin Architecture
+
+**NOTICE:** as of v0.1.0, this plugin acts as an
+[alternate plugin](https://github.com/duojs/duo/blob/master/docs/plugins.md#alternate-plugins),
+meaning it does a **single compile** on the entire build, instead of being run
+for every single file. (which is the default style of plugin)
+
+This allows some better default behavior for a CSS preprocessor, such as sharing
+variables across an entire tree of CSS files.
+
 ## Test
 
 ```bash
 $ npm install
-$ make
+$ make test
 ```
 
 ## License
