@@ -1,13 +1,10 @@
 {
   "name": "duo-myth",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "duo plugin for segmentio/myth",
   "keywords": [],
   "author": "Matthew Mueller <mattmuelle@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/MatthewMueller/duo-myth.git"
-  },
+  "repository": "duojs/myth",
   "dependencies": {
     "defaults": "^1.0.0",
     "myth": "^1.2.1"
