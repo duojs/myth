@@ -1,0 +1,33 @@
+
+:root {
+  --green: #a6c776;
+}
+
+@custom-media --narrow-window screen and (max-width: 30em);
+
+@media (--narrow-window) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+a {
+  color: var(--green);
+  font-variant: all-small-caps;
+  transition: color 1s;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+a:hover {
+  color: color(var(--green) shade(20%));
+}
+
+::placeholder {
+  opacity: .4;
+  transition: opacity 1s;
+}
+
+:focus::placeholder {
+  opacity: .2;
+}
