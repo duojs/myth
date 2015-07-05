@@ -5,3 +5,7 @@ node_js:
   - "0.12"
   - "iojs"
 script: "make test"
+cache:
+  directories:
+    - node_modules
+sudo: false

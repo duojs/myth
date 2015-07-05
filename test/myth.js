@@ -25,7 +25,7 @@ describe('duo-myth', function() {
         assert.equal(css.code.trim(), expected.trim());
         done();
       });
-  })
+  });
 
   it('should compile .css using imports', function(done) {
     var expected = read(fixture('import/build.css'), 'utf8');
@@ -38,7 +38,7 @@ describe('duo-myth', function() {
         assert.equal(css.code.trim(), expected.trim());
         done();
       });
-  })
+  });
 
   it('should process the entire build', function(done) {
     var expected = read(fixture('alternate-plugin/build.css'), 'utf8');
@@ -62,5 +62,5 @@ describe('duo-myth', function() {
         assert.equal('body{background:blue;}', css.code);
         done();
       });
-  })
-})
+  });
+});
