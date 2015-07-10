@@ -1,8 +1,13 @@
 {
   "name": "duo-myth",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "duo plugin for segmentio/myth",
-  "keywords": [ "duo", "myth", "plugin", "alternate" ],
+  "keywords": [
+    "duo",
+    "myth",
+    "plugin",
+    "alternate"
+  ],
   "author": "Matthew Mueller <mattmuelle@gmail.com>",
   "repository": "duojs/myth",
   "dependencies": {

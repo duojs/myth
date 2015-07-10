@@ -1,4 +1,10 @@
 
+0.2.0 / 2015-07-10
+==================
+
+  * big internal cleanup, adding cache support
+  * eslint
+
 0.1.0 / 2015-03-29
 ==================
 
