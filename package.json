@@ -2,20 +2,22 @@
   "name": "duo-myth",
   "version": "0.1.0",
   "description": "duo plugin for segmentio/myth",
-  "keywords": [],
+  "keywords": [ "duo", "myth", "plugin", "alternate" ],
   "author": "Matthew Mueller <mattmuelle@gmail.com>",
   "repository": "duojs/myth",
   "dependencies": {
-    "defaults": "^1.0.0",
+    "debug": "^2.2.0",
+    "extend": "^3.0.0",
     "myth": "^1.2.1"
   },
   "devDependencies": {
     "bluebird": "^2.9.21",
-    "duo": "^0.11.1",
+    "co-mocha": "~1.0.3",
+    "duo": "^0.13.1",
     "eslint": "^0.24.0",
     "eslint-config-duo": "0.0.1",
     "gnode": "^0.1.1",
-    "mocha": "^2.2.1"
-  },
-  "main": "index"
+    "mocha": "^2.2.1",
+    "rimraf": "^2.4.1"
+  }
 }
