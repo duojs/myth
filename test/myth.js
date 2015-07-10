@@ -36,7 +36,7 @@ describe('duo-myth', function() {
     assert.equal(css.code.trim(), expected.trim());
   });
 
-  describe.only('with caching enabled', function() {
+  describe('with caching enabled', function() {
     afterEach(function *() {
       yield build('simple').cache(true).cleanCache();
     });
@@ -52,7 +52,6 @@ describe('duo-myth', function() {
       yield duo.run();
       var withCache = timer2();
 
-      console.log('with cache: %d -- no cache: %d', withCache, noCache);
       assert(withCache < noCache / 2);
     });
   });
